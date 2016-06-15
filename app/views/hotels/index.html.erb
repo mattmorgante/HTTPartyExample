@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Hotels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Star rating</th>
+      <th>Accomodation type</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hotels.each do |hotel| %>
+      <tr>
+        <td><%= hotel["name"] %></td>
+        <td><%= hotel["address"]%></td>
+        <td><%= hotel["star_rating"] %></td>
+        <td><%= hotel["accomodation_type"] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hotel', new_hotel_path %>
